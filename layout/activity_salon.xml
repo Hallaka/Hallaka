@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/salonActLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
+    tools:context=".Activity.Salon.SalonActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/salonImageSalon"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/salonNameSalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/salonImageSalon"
+            android:layout_alignBottom="@+id/salonCitySalon"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_lay_view"
+            android:fontFamily="sans-serif"
+            android:hint="Salon Name"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="#293250"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/salonCitySalon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/salonImageSalon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_lay_view"
+            android:drawableStart="@drawable/ic_location"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="Salon City"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="#293250"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:id="@+id/barbersLaySalon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/salonCitySalon"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_lay_view">
+
+            <TextView
+                android:id="@+id/salonBarberTxtSalon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:text="Salon Barbers"
+                android:textColor="#293250"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/barberDataSalon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/AddBarberIdSalon"
+                android:layout_below="@+id/salonBarberTxtSalon" />
+
+            <Button
+                android:id="@+id/AddBarberIdSalon"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="20dp"
+                android:background="#293250"
+                android:text="Add Barber"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_back"
+            android:padding="12dp"
+            android:visibility="invisible"
+            app:SpinKit_Color="@color/colorBlueDark"
+            android:elevation="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blackBackSaloon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFadedGray"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:elevation="6dp">
+
+        <include
+            android:id="@+id/timingLaySaloon"
+            layout="@layout/barber_timing_lay"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

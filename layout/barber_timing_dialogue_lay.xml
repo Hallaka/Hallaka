@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#293250"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/details"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/availableTimeLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:lines="2"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/startDateBarberBooking"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/white_border_back"
+        android:hint="@string/date"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorFadedWhite"
+        android:textSize="14sp"
+        android:layout_marginEnd="2.5dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/startTimeBarberBooking"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="@string/time"
+        android:background="@drawable/white_border_back"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorFadedWhite"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookBarberBooking"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFD55A"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_button_white"
+        android:text="@string/book"
+        />
+</LinearLayout>

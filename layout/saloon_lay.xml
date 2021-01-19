@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_back"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/saloonImageProLay"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_person"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/saloonNameProLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saloonImageProLay"
+            android:layout_centerHorizontal="true"
+            android:text="Hair Wax"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

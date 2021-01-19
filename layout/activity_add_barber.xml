@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addBarberLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+    tools:context=".Activity.AddBarber.AddBarberActivity">
+
+    <TextView
+        android:id="@+id/addBarberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Add Barber"
+        android:textColor="#293250"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/barberImageAddBarber"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/addBarberTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_add_photo" />
+
+    <EditText
+        android:id="@+id/barberNameAddBarber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/barberImageAddBarber"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:hint="Barber Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/barberRateAddBarber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/barberNameAddBarber"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:hint="Rate per Hour"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/timingTxtAddBarber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barberRateAddBarber"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:paddingStart="12dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="8dp"
+        android:text="Timing"
+        android:textColor="#293250"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/barberSTimingAddBarber"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/timingTxtAddBarber"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/barberCTimingAddBarber"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="Starting Time"
+        android:inputType="time"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/barberCTimingAddBarber"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/timingTxtAddBarber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="Closing Time"
+        android:inputType="time"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/addBarberId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barberSTimingAddBarber"
+        android:layout_marginTop="20dp"
+        android:background="#293250"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/loading_back"
+        android:padding="12dp"
+        android:visibility="invisible"
+        app:SpinKit_Color="@color/colorBlueDark"
+        android:elevation="12dp" />
+
+</RelativeLayout>

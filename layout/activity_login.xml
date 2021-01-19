@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/loginLay"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+    style="@style/Theme.MaterialComponents.Light.NoActionBar"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".Activity.Login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="0dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hallaka_logo" />
+
+    <EditText
+        android:id="@+id/userNameSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/logoImage"
+        android:layout_marginTop="20dp"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:paddingStart="15dp"
+        android:paddingEnd="15sp"
+        android:textSize="15sp"
+        android:hint="@string/email"
+        android:background="@drawable/back_lay_border_gray"
+        android:inputType="textEmailAddress"
+        android:autofillHints="" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordSignIn"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:hintEnabled="false"
+        app:hintAnimationEnabled="false"
+        android:layout_below="@+id/userNameSignIn"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBlue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_lay_border_gray"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:hint="@string/password"
+            android:minEms="6"
+            android:textColor="@color/colorBlue"
+            android:textSize="15sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signInBtnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordSignIn"
+        android:background="#FFD55A"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:textSize="15sp"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/rememberPassSignInLay"
+    android:layout_below="@+id/signInBtnSignIn"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/rememberPassSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/remember_me"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBlue"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:id="@+id/rememberPassIdSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/rememberPassSignIn"
+        app:buttonTint="@color/colorBlue"
+        android:layout_alignBottom="@id/rememberPassSignIn"
+        android:checked="true"
+        android:layout_marginTop="15dp"
+        />
+</RelativeLayout>
+    <Button
+        android:id="@+id/newUserIdSignIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rememberPassSignInLay"
+        android:background="#293250"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/new_user"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/forgotPassIdSignIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rememberPassSignInLay"
+        android:background="#293250"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/forgot_password"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_back"
+        android:elevation="12dp"
+        android:visibility="invisible"
+        app:SpinKit_Color="@color/colorBlueDark" />
+
+</RelativeLayout>

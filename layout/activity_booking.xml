@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookingLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="10dp"
+    tools:context=".Activity.Booking.BookingActivity">
+
+    <EditText
+        android:id="@+id/userSearchIdBooking"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/back_lay_border_gray"
+        android:hint="@string/lahore"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="40dp" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/search_city_bar_icon"
+        android:src="@drawable/ic_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/saloonsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/userSearchIdBooking"
+        android:layout_marginTop="8dp"
+        android:padding="5dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit_saloon"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_back"
+        android:padding="12dp"
+        android:visibility="invisible"
+        app:SpinKit_Color="@color/colorBlueDark"
+        android:elevation="12dp" />
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addProductLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+    tools:context=".Activity.AddProduct.AddProductActivity">
+
+    <TextView
+        android:id="@+id/addProductTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/add_product_details"
+        android:textColor="#293250"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/productImageAddPro"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/addProductTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_add_photo" />
+
+    <EditText
+        android:id="@+id/productNameAddPro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/productImageAddPro"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:hint="Product Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/productPriceAddPro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/productNameAddPro"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:hint="Product Price"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textSize="15sp" />
+
+    <Spinner
+        android:id="@+id/productTypeSp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/productPriceAddPro"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/addProductId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productTypeSp"
+        android:layout_marginTop="20dp"
+        android:background="#293250"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/loading_back"
+
+        android:visibility="invisible"
+        app:SpinKit_Color="@color/colorBlueDark"
+        android:elevation="12dp" />
+
+</RelativeLayout>

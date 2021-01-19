@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forgotPassLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+    tools:context=".Activity.ForgotPassword.ForgotPassActivity">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:padding="0dp"
+        android:src="@drawable/hallaka_logo" />
+
+    <EditText
+        android:id="@+id/emailForgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/logoImage"
+        android:layout_marginTop="0dp"
+        android:autofillHints=""
+        android:background="@drawable/back_lay_border_gray"
+        android:ems="100"
+        android:fontFamily="sans-serif"
+        android:hint="Enter your Email to get Password"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingEnd="15sp" />
+
+    <Button
+        android:id="@+id/sendForgotPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailForgotPass"
+        android:layout_marginTop="20dp"
+        android:background="#FFD55A"
+        android:text="Send Password"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/backForgotPass"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendForgotPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#293250"
+        android:fontFamily="sans-serif"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>
